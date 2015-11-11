@@ -1,0 +1,34 @@
+<ruleset comparisonMethod="maven"
+         xmlns="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 http://mojo.codehaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
+  <ignoreVersions>
+    <ignoreVersion type="regex">(?i).*\b(alpha|beta).*</ignoreVersion>
+  </ignoreVersions>
+  <rules>
+    <rule groupId="commons-cli">
+      <ignoreVersions>
+        <ignoreVersion type="regex">2004.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="org.jruby">
+      <ignoreVersions>
+        <ignoreVersion type="regex">.*preview.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="com.github.detro.ghostdriver">
+      <ignoreVersions>
+        <ignoreVersion type="regex">.*-dev</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="io.netty" artifactId="netty">
+      <ignoreVersions>
+        <ignoreVersion type="regex">3\.10\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="com.google.inject" artifactId="guice">
+      <ignoreVersions>
+        <ignoreVersion type="regex">4\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+  </rules>
+</ruleset>
